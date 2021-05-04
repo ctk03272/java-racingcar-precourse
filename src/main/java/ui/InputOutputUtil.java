@@ -2,6 +2,9 @@ package ui;
 
 import java.util.Scanner;
 
+import engine.Car;
+import engine.Cars;
+
 public class InputOutputUtil {
 
 	private final Scanner scanner;
@@ -29,4 +32,19 @@ public class InputOutputUtil {
 		System.out.println("에러입니다.");
 	}
 
+	public void printCarsStatus(Cars cars) {
+		for (Car car : cars.getCarList()) {
+			printCarStatus(car);
+		}
+	}
+
+	private void printCarStatus(Car car) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(car.getName());
+		sb.append(" : ");
+		for (int i = 0; i < car.getLocation(); i++) {
+			sb.append("-");
+		}
+		System.out.println(sb.toString());
+	}
 }

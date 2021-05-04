@@ -7,7 +7,7 @@ import java.util.List;
 public class Cars {
 	private List<Car> carList;
 
-	public Cars(String carNames) throws Exception{
+	public Cars(String carNames) throws Exception {
 		List<String> carNamesList = Arrays.asList(carNames.split(","));
 		List<Car> carList = new ArrayList<>();
 		for (String carName : carNamesList) {
@@ -19,4 +19,11 @@ public class Cars {
 	public List<Car> getCarList() {
 		return carList;
 	}
+
+	public void moveCars() {
+		for (Car car : carList) {
+			car.moveCar();
+		}
+	}
+
 }

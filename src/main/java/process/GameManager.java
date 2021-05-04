@@ -16,7 +16,11 @@ public class GameManager {
 
 	public void startGame() {
 		initGame();
-		System.out.println("done init");
+		System.out.println("실행 결과");
+		while(gameEngine.isRunning()){
+			gameEngine.moveCar();
+			inputOutputUtil.printCarsStatus(gameEngine.getCars());
+		}
 	}
 
 	private void initGame() {
