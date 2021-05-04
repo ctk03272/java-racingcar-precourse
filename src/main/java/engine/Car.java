@@ -9,6 +9,9 @@ public class Car {
 		if (name.length() > 5) {
 			throw new IllegalArgumentException("이름은 5 이하 입니다.");
 		}
+		if(name.length()==0){
+			throw new IllegalArgumentException("이름을 입력해 주세요");
+		}
 		this.name = name;
 		this.location = 0;
 	}

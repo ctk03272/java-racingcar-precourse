@@ -36,6 +36,7 @@ public class InputOutputUtil {
 		for (Car car : cars.getCarList()) {
 			printCarStatus(car);
 		}
+		System.out.println();
 	}
 
 	private void printCarStatus(Car car) {
@@ -46,5 +47,15 @@ public class InputOutputUtil {
 			sb.append("-");
 		}
 		System.out.println(sb.toString());
+	}
+
+	public void printWinner(Cars cars){
+		StringBuilder sb=new StringBuilder();
+		for (Car car:cars.getCarList()){
+			sb.append(car.getName());
+			sb.append(",");
+		}
+		sb.deleteCharAt(sb.length()-1);
+		System.out.println(sb.toString()+"가 최종 우승했습니다.");
 	}
 }

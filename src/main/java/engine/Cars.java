@@ -16,6 +16,10 @@ public class Cars {
 		this.carList = carList;
 	}
 
+	public Cars() {
+		this.carList = new ArrayList<>();
+	}
+
 	public List<Car> getCarList() {
 		return carList;
 	}
@@ -25,5 +29,4 @@ public class Cars {
 			car.moveCar();
 		}
 	}
-
 }
