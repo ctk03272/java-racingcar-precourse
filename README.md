@@ -5,3 +5,10 @@
 
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
+
+## 구현 기능 목록
+- 자동차 생성
+- 자동차 이름 부여
+- 사용자의 게임 초기화( 몇 번을 이동할 것인지 )
+- 자동차 전진 기능
+- 우승자 선택 기능
