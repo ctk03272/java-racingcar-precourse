@@ -5,21 +5,15 @@ import java.util.ArrayList;
 public class GameEngine {
 
 	private Cars cars;
-	private int numberOfGames;
-	private int stage;
+	private Count numberOfGames;
+	private Count stage;
 
 	public GameEngine() {
-		this.stage = 0;
-	}
-
-	public void startGame() {
-		for (int i = 0; i < numberOfGames; i++) {
-
-		}
+		this.stage=new Count();
 	}
 
 	public boolean isRunning() {
-		if (numberOfGames > stage) {
+		if (numberOfGames.getCount() > stage.getCount()) {
 			return true;
 		}
 		return false;
@@ -27,14 +21,17 @@ public class GameEngine {
 
 	public void initGame(String carNames) throws Exception {
 		this.cars = new Cars(carNames);
+		this.numberOfGames = new Count();
+		this.stage = new Count();
 	}
-	public void setNumberOfGames(int numberOfGames){
-		this.numberOfGames=numberOfGames;
+
+	public void setNumberOfGames(int numberOfGames) {
+		this.numberOfGames.setCount(numberOfGames);
 	}
 
 	public void moveCar() {
 		cars.moveCars();
-		stage++;
+		this.stage.setCount(this.stage.getCount() + 1);
 	}
 
 	public Cars getCars() {
